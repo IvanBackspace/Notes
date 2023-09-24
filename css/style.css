@@ -1,51 +1,55 @@
 .contanier {
-  max-width: 800px;
-  margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
 }
-
 body {
-  background-color: rgb(213, 213, 213);
-  padding: 10px;
+    background-color: rgb(213, 213, 213); 
+    padding: 10px;
 }
 
 .input {
-  width: 100%;
+    width: 100%;
 }
 
 .list-note {
-  float: right;
-}
-
-ul li {
-  list-style: none;
-  padding-left: 5px;
-}
-
-ul {
-  padding-left: 5px;
-}
-
-.text-crossed {
-  text-decoration: line-through;
-}
-
-.warning {
-  color: rgb(0, 255, 26);
-}
-
-.success {
-  color: rgb(255, 118, 118);
-}
-
-.text-span {
-  text-align: center;
+    float: right;
+    
 }
 
 li {
-  display: block;
-  height: 63px;
+    list-style: none;
+    padding-left: 5px;
+}
+ul {
+    padding-left: 5px;
+}
+
+.text-crossed {
+    text-decoration: line-through;
+}
+
+.btn-remove {
+    background: #ff5d5d;
+}
+
+.warning {
+    color: rgb(0 0 0);
+    background: #00ff1f;
+}
+.success {
+    color: rgb(0 0 0);
+    background: #e8ff00;
+}
+
+.text-span {
+    text-align: center;
+}
+
+li {
+    display: block;
+    height: 63px;
 }
 
 .btn-create {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
