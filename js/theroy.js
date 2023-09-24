@@ -119,7 +119,7 @@ function getNoteTemplate(note, index) {
             <span class="${note.completed ? 'text-crossed' : ''} text-span">${note.title}</span>
             <span class="list-note">
                 <span class="${note.completed ? 'warning' : 'success'} btn btn-primary me-md-2" data-index="${index}" data-type="toggle">&check;</span>
-                <span class="btn btn-primary" data-index="${index}" data-type="remove">&times;</span><br>
+                <span class="btn btn-remove btn-primary" data-index="${index}" data-type="remove">&times;</span><br>
             </span><br>
         </li>`
     )
