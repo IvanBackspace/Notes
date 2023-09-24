@@ -1,4 +1,4 @@
-const inputElement = document.getElementById('title')
+const inputElement = document.getElementById('formGroupExampleInput')
 const createBtn = document.getElementById('create')
 const listElement = document.getElementById('list')
 
@@ -106,7 +106,7 @@ listElement.onclick = function (event) {
         if (type === 'toggle') {
             notes[index].completed = !notes[index].completed
         } else if (type === 'remove') {
-            console.log('remove', index)
+            notes.splice(index, 1)
         }
     }
     render()
@@ -116,11 +116,11 @@ function getNoteTemplate(note, index) {
 
     listElement.insertAdjacentHTML('beforeend',
         `<li>
-            <span class="${note.completed ? 'text-crossed' : ''}">${note.title}</span>
+            <span class="${note.completed ? 'text-crossed' : ''} text-span">${note.title}</span>
             <span class="list-note">
-                <span class="${note.completed ? 'warning' : 'success'}" data-index="${index}" data-type="toggle">&check;</span>
-                <span data-index="${index}" data-type="remove">&times;</span>
-            </span>
+                <span class="${note.completed ? 'warning' : 'success'} btn btn-primary me-md-2" data-index="${index}" data-type="toggle">&check;</span>
+                <span class="btn btn-primary" data-index="${index}" data-type="remove">&times;</span><br>
+            </span><br>
         </li>`
     )
 } 
