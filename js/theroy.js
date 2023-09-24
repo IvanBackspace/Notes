@@ -73,6 +73,8 @@ function render() {
     //     getNoteTemplate(note)
     // }
 
+    listElement.innerHTML = ''
+
     for (let i = 0; i < notes.length; i++) {
         getNoteTemplate(notes[i], i)
     }
@@ -90,19 +92,35 @@ createBtn.onclick = function () {
         completed: false
     }
 
-    getNoteTemplate(newNote)
+    notes.push(newNote)
+    render()
     inputElement.value = '';
 }
 
+listElement.onclick = function (event) {
+
+    if (event.target.dataset.index) {
+        const index = parseInt(event.target.dataset.index) 
+        const type = event.target.dataset.type
+
+        if (type === 'toggle') {
+            notes[index].completed = !notes[index].completed
+        } else if (type === 'remove') {
+            console.log('remove', index)
+        }
+    }
+    render()
+}
+
 function getNoteTemplate(note, index) {
-    console.log(note.completed)
+
     listElement.insertAdjacentHTML('beforeend',
         `<li>
             <span class="${note.completed ? 'text-crossed' : ''}">${note.title}</span>
             <span class="list-note">
-                <span class="${note.completed ? 'warning' : 'success'}" data-index="${index}">&check;</span>
-                <span>&times;</span>
+                <span class="${note.completed ? 'warning' : 'success'}" data-index="${index}" data-type="toggle">&check;</span>
+                <span data-index="${index}" data-type="remove">&times;</span>
             </span>
         </li>`
     )
-}
+} 
