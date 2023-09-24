@@ -38,8 +38,16 @@ ul {
   background: #00ff1f;
 }
 
+.warning:hover {
+  background: #00ff1f;
+}
+
 .success {
   color: rgb(0, 0, 0);
+  background: #e8ff00;
+}
+
+.success:hover {
   background: #e8ff00;
 }
 
