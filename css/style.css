@@ -19,24 +19,6 @@ li {
 img {
     vertical-align: top;
 }
-
-.ov-scroll{
-	overflow-y: auto;
-	-webkit-overflow-scrolling:touch;
-}
-
-body{
-	-webkit-text-size-adjust: none;
-}
-
-a, label{
-	-webkit-tap-highlight-color: transparent;
-}
-
-input[type=text], input[type=submit], textarea{
-	-webkit-appearance: none;
-} 
-
 h1,
 h2,
 h3,
@@ -46,15 +28,20 @@ h6 {
     font-weight: inherit;
     font-size: inherit;
 }
-html , body, .contanier , input, span{
+html , body, .contanier {
     background-color: #212529;
     color: #9fa3a6;
 }
 
+input, span{ 
+    background-color: #2b3035; 
+}
+
 #list li {
-    background-color: #212529;
-    /* background-color: #2b3035; */
+    /* background-color: #212529; */
+    background-color: #2b3035; 
     border: 1px solid #495057;
+    color: #9fa3a6;
 }
 
 #alert-main {
@@ -79,11 +66,34 @@ html , body, .contanier , input, span{
     display: grid;
 }
 
-/* #edit, #delete {
-   width: 51px;
-} */
+#edit {
+   margin-bottom: 10px;
+}
 
 #create {
     margin-bottom: 9px;
+    background-color: #2b3035;
 }
+
+.modal-footer {
+    justify-content: space-between;
+    border-top: 1px solid #495057;
+    color: #9fa3a6;
+}
+
+.modal-header {
+    border-bottom: 1px solid #495057;
+    color: #9fa3a6;
+}
+
+.modal-content {
+    background-color: #2b3035;
+    color: #9fa3a6;
+}
+
+#buttonUnderstood {
+    background-color: rgb(4 175 0);
+    border: 1px solid #495057;
+}
+
 
