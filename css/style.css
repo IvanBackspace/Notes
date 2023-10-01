@@ -19,6 +19,24 @@ li {
 img {
     vertical-align: top;
 }
+
+.ov-scroll{
+	overflow-y: auto;
+	-webkit-overflow-scrolling:touch;
+}
+
+body{
+	-webkit-text-size-adjust: none;
+}
+
+a, label{
+	-webkit-tap-highlight-color: transparent;
+}
+
+input[type=text], input[type=submit], textarea{
+	-webkit-appearance: none;
+} 
+
 h1,
 h2,
 h3,
